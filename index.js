@@ -1,7 +1,8 @@
 const express = require("express");
 var  app = express()
 
-app.set('view' , 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.get('/',(req,res)=>{
   res.render('home',{name : 'Karan'})
