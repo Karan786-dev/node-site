@@ -6,10 +6,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/',(req,res)=>{
-  const data = [{
+  const data = [
+    {
     name : 'Karan',
-    name : 'Arsh'
-  }]
+    },
+    {
+      name : 'Arsh'
+    }
+  ]
   res.render('home',{alldata : data})
 })
 
