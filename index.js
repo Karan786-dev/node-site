@@ -16,8 +16,9 @@ app.get('/refer-data',async (req,res)=>{
   var offer_id = req.query.offer
   var number = req.query.paytm
   if(offer_id || number){
-    let ref_counts = await axios.get('https://api.devlopath.com/checkref?token=eeae5f78-a2b1-11ec-958c-7c10c91d52d7&number='+number+'&offerid='+offer_id+'')
-    console.log(ref_counts)
+    let data = await axios.get('https://api.devlopath.com/checkref?token=eeae5f78-a2b1-11ec-958c-7c10c91d52d7&number='+number+'&offerid='+offer_id+'')
+    let ref_count = data.data.total_refers
+    console.log(ref_count)
   }
 })
 
