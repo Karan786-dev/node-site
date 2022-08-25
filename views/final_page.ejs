@@ -1,1 +1,45 @@
-js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Check Refers</title>
+  <style>
+  body{
+    margin: 0;
+    padding: 0;
+  }
+    .container{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto">
+    <div class="w-full max-w-xs">
+      <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
+        <div class="flex items-center justify-between">
+          <table class="table-auto">
+            <tbody>
+              <tr>
+            <td class="border px-4 py-2">Campaign</td>
+            <td class="border px-4 py-2">Total Refer</td>
+            </tr>
+             <tr class="bg-gray-100">
+      <td class="border px-4 py-2"><%=offer_name%></td>
+      <td class="border px-4 py-2"><%= ref_count%></td>
+    </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
