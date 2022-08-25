@@ -6,7 +6,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/',(req,res)=>{
-  res.render('home',{name : 'Karan'})
+  const data = {
+    name : 'Karan',
+    name : 'Arsh'
+  }
+  res.render('home',{alldata : data})
 })
 
 app.listen(8080)
