@@ -7,10 +7,8 @@
   <title>Html Page</title>
 </head>
 <body>
-  <p id="1234"></p>
-  <script type="text/javascript" charset="utf-8">
-    alert(window.location.href)
-    document.getElementById('1234').innerHTML = {{ name }}
-  </script>
+  <select id="lists">
+    <% if(alldata){alldata.forEach(i =>{%><option><%=i%></option><%})}%>
+  </select>
 </body>
 </html>
