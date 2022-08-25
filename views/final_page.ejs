@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <title>Check Refers</title>
   <style>
+  
   body{
     margin: 0;
     padding: 0;
@@ -18,12 +20,38 @@
       justify-content: center;
       align-items: center;
     }
+    .sketch-button {
+      margin-bottom: 35px;
+      left: 60px;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5);
+  border-radius: 11px;
+  padding: 12px 20px;
+  position: relative;
+  line-height: 24px;
+  color: #14387e;
+  box-shadow: 0 1px 2px rgba(0 0 0 / 2%), 0 4px 16px rgba(0 0 0 / 2%),
+    0 4px 24px rgba(0 0 0 / 2%);
+
+  &.start {
+    svg {
+      animation: stroke 1s linear;
+    }
+  
   </style>
 </head>
 <body>
   <div class="container mx-auto">
     <div class="w-full max-w-xs">
       <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
+        <button class="sketch-button"><a href="https://t.me/earningcamps">Telegram Channel</a></button>
         <div class="flex items-center justify-between">
           <table class="table-auto">
             <tbody>
