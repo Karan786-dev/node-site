@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 
 app.get('/',async (req,res)=>{
   let data = await axios.get(api_url)
+  console.log(data)
   res.render('home',{alldata : data})
 })
 
