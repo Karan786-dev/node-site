@@ -18,7 +18,14 @@ app.get('/refer-data',async (req,res)=>{
   if(offer_id || number){
     let data = await axios.get('https://api.devlopath.com/checkref?token=eeae5f78-a2b1-11ec-958c-7c10c91d52d7&number='+number+'&offerid='+offer_id+'')
     let ref_count = data.data.total_refers
-    console.log(ref_count)
+    let response = await axios.get(api_url)
+    var offer_name;
+    response.data.forEach((i) =>{
+      if(i.offerid == offer_id){
+        offer_name = i.name
+      }
+    })
+    res.render('final_page',{offer_name : offer_name , ref_count : ref_count})
   }
 })
 
